@@ -6,7 +6,6 @@ int cbinsearch(int *arr, int size, int value) {
     while (low < up) {
         uint64_t key = (low + up) / 2;
         if (arr[key] == value) {
-
             uint64_t temp = key;
 
             while (arr[key -= 1] == value) {
@@ -17,12 +16,9 @@ int cbinsearch(int *arr, int size, int value) {
             }
 
             return count + 1;
-        }
-
-        else if (arr[key] > value) {
+        } else if (arr[key] > value) {
             up = key;
-        }
-        else {
+        } else {
             low = key + 1;
         }
     }
