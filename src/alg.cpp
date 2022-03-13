@@ -1,12 +1,12 @@
 // Copyright 2021 NNTU-CS
 
 int cbinsearch(int *arr, int size, int value) {
-  uint64_t low = 0, up = (size - 1), count = 0;
+  int low = 0, up = (size - 1), count = 0;
 
     while (low < up) {
-        uint64_t key = (low + up) / 2;
+        int key = (low + up) / 2;
         if (arr[key] == value) {
-            uint64_t temp = key;
+            int temp = key;
 
             while (arr[key -= 1] == value) {
                 count += 1;
